@@ -1,9 +1,12 @@
-import { useContext } from "react";
+import { useState, useContext } from "react";
 import { CountdownContext } from "../contexts/CountdownContext";
+import { Close } from "./icons/Close";
 
 import styles from "../styles/components/Countdown.module.css";
 
 export function Countdown() {
+    const [hover, setHover] = useState(false);
+
     const { 
         minutes, 
         seconds, 
@@ -38,9 +41,10 @@ export function Countdown() {
             ) : (
                 <>
                     {isActive ? (
-                        <button onClick={reset}
+                        <button onClick={reset} onMouseEnter={() => setHover(true)} onMouseOut={() => setHover(false)}
                             type="button" className={`${styles.countdownButton} ${styles.countdownButtonActive}`}>
                             Abandonar ciclo
+                            <Close color={ hover ? "#FFFFFF" : "#000000"}/>
                         </button>
                     ) : (
                         <button onClick={start} 
