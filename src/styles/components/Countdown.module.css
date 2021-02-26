@@ -23,11 +23,11 @@
 }
 
 .countdownContainer > div span:first-child {
-    border-right: 1px solid #f0f1f3;
+    border-right: 1px solid var(--background);
 }
 
 .countdownContainer > div span:last-child {
-    border-left: 1px solid #f0f1f3;
+    border-left: 1px solid var(--background);
 }
 
 .countdownContainer > span {
@@ -42,7 +42,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    
+
     border: 0;
     border-radius: 5px;
 
@@ -60,6 +60,10 @@
 }
 
 .countdownButtonActive {
+    height: 4.75rem;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+
     background: var(--white);
     color: var(--title);
 }
@@ -80,4 +84,19 @@
 
 .countdownButton img, .countdownButton svg {
     margin-left: 1rem;
+}
+
+.buttonProgress {
+    height: 4px;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    background: var(--gray-line);
+    position: relative;
+}
+
+.buttonProgress > div {
+    height: 4px;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    background: var(--green);
 }

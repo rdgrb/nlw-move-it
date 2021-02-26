@@ -6,6 +6,7 @@ interface CountdownContextValues {
     seconds: number;
     hasFinished: boolean; 
     isActive: boolean;
+    remainingTime: number;
     start: () => void;
     reset: () => void;
 }
@@ -21,7 +22,9 @@ let countdownTimeout: NodeJS.Timeout;
 export function CountdownProvider({ children }: ProviderProps) {
     const { startNewChallenge } = useContext(ChallengesContext);
 
-    const [time, setTime] = useState(0.1 * 60 - 1);
+    const fullTime = 61
+    const [time, setTime] = useState(1 * 60);
+    const [remainingTime, setRemainingTime] = useState(0);
     const [isActive, setIsActive] = useState(false);
     const [hasFinished, setHasFinished] = useState(false);
     
@@ -36,24 +39,32 @@ export function CountdownProvider({ children }: ProviderProps) {
         clearTimeout(countdownTimeout);
         setIsActive(false);
         setHasFinished(false);
-        setTime(0.1 * 60 - 1);
+        setRemainingTime(0);
+        setTime(1 * 60);
     }
     
+    function calculateRemainingTime() {
+        const remaining = Math.floor(((fullTime - time) / fullTime) * 100)
+        setRemainingTime(remaining);
+    }
+
     useEffect(() => {
         if (isActive && time > 0) {
             countdownTimeout = setTimeout(() => {
                 setTime(time - 1);
+                calculateRemainingTime();
             }, 1000);
         } else if (isActive && time == 0) {
             setHasFinished(true);
             setIsActive(false);
+            setRemainingTime(0);
             startNewChallenge();
         }
     }, [isActive, time])
 
     return (
         <CountdownContext.Provider value={
-            { minutes, seconds, hasFinished, isActive, start, reset }} >
+            { minutes, seconds, hasFinished, remainingTime, isActive, start, reset }} >
             { children }
         </CountdownContext.Provider>
     )
