@@ -27,3 +27,14 @@
 .profileContainer div p img {
     margin-right: 0.5rem;
 }
+
+.buttonContainer {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.buttonContainer button {
+    border: 0;
+    background: transparent;
+}
