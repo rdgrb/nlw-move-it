@@ -51,7 +51,7 @@ export function ChallengesProvider({ children }: ProviderProps) {
         new Audio("/notification.mp3").play();
         if(Notification.permission === "granted") {
             new Notification("moveit - Desafio recebido 🥳", {
-                body: `Valendo ${challenge.amount} xp!!`,
+                body: `Complete o desafio e ganhe ${challenge.amount}xp!`,
                 silent: true,
                 icon: "/favicon.png",
             })
