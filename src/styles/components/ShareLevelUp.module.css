@@ -1,0 +1,72 @@
+.shareContainer {
+    width: 1280px;
+    height: 720px;
+
+    background: var(--white);
+
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    padding: 1.5rem;
+}
+
+.shareContainer > div {
+    padding: 1rem;
+}
+
+#shareContainerLeft {
+    width: 100%;
+    padding: 2rem 3rem;
+    text-align: center;
+    align-self: center;
+}
+
+#shareContainerLeft header {
+    font-size: 17rem;
+    font-weight: 600;
+    color: var(--blue);
+    background: url("/icons/levelup.svg") no-repeat center;
+    background-size: contain;
+}
+
+#shareContainerLeft p {
+    font-size: 3rem;
+    font-weight: 600;
+    color: var(--title);
+    margin-top: 3rem;
+}
+
+#shareContainerRight {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 3rem;
+}
+
+#shareContainerRight > div {
+    padding: 2.5rem;
+    border-bottom: 0.5px var(--gray-line) solid;
+}
+
+#shareContainerRight > div p {
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+
+#shareContainerRight > div h5 {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    color: var(--text);
+}
+
+#shareContainerRight > div span {
+    color: var(--blue);
+    font-weight: 600;
+}
+
+#shareContainerRight > img {
+    margin-top: 3.5rem;
+    width: 50%;
+    align-self: center;
+}
