@@ -115,3 +115,9 @@
     color: var(--white);
 }
 
+@media (max-width: 768px) {
+    .boxContainer {
+        margin: 3rem 0;
+        height: 32rem;
+    }
+}

@@ -7,10 +7,22 @@
     flex-direction: column;
 }
 
-.container section {
-    flex: 1;
-    display: grid;
-    grid-template-columns: 1fr 1.3fr;
-    gap: 6.25rem;
-    align-content: center;
+@media (min-width: 768px) {
+    .container {
+        padding: 5.5rem 5rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        padding: 2.5rem 2rem;
+    }
+
+    .container section {
+        flex: 1;
+        display: grid;
+        grid-template-columns: 1fr 1.3fr;
+        gap: 6.25rem;
+        align-content: center;
+    }
 }

@@ -38,3 +38,9 @@
     border: 0;
     background: transparent;
 }
+
+@media (max-width: 768px) {
+    .profileContainer {
+        margin: 4rem 0;
+    }
+}
