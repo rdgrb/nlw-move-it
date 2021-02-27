@@ -22,7 +22,7 @@ const darkTheme = {
     "red": "#e83f5b",
     "green": "#4cd62b",
     "blue": "#3848EA",
-    "blue-dark": "#4953b8",
+    "blue-dark": "#232a70",
     "blue-twitter": "#2aa9e0",
 }
 

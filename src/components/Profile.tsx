@@ -21,7 +21,7 @@ export function Profile() {
             </div>
             <div className={styles.buttonContainer}>
                 <button onClick={changeTheme}>
-                    <Moon color={ theme.title === "light" ? "#000000" : "#FFFFFF"}/>
+                    <Moon color={ theme.title === "light" ? "#000000" : "#BABABA"}/>
                 </button>
             </div>
         </div>
