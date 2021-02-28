@@ -18,16 +18,16 @@
 ---
 
 ### Tema claro
-<img src="https://i.imgur.com/lvEeifi.png" width="49%" />
-<img src="https://i.imgur.com/RdTrc3z.png" width="49%" />
-<img src="https://i.imgur.com/9xvnZHN.png" width="49%" />
-<img src="https://i.imgur.com/uYRrQvT.png" width="49%" />
+<img src="https://i.imgur.com/lvEeifi.png" width="45%" />
+<img src="https://i.imgur.com/RdTrc3z.png" width="45%" />
+<img src="https://i.imgur.com/9xvnZHN.png" width="45%" />
+<img src="https://i.imgur.com/uYRrQvT.png" width="45%" />
 
 ### Tema (totalmente) escuro
-<img src="https://i.imgur.com/efF1blA.png" width="49%" />
-<img src="https://i.imgur.com/I5KlLEo.png" width="49%" />
-<img src="https://i.imgur.com/scWaVWZ.png" width="49%" />
-<img src="https://i.imgur.com/MA42VCg.png" width="49%" />
+<img src="https://i.imgur.com/efF1blA.png" width="45%" />
+<img src="https://i.imgur.com/I5KlLEo.png" width="45%" />
+<img src="https://i.imgur.com/scWaVWZ.png" width="45%" />
+<img src="https://i.imgur.com/MA42VCg.png" width="45%" />
 
 # 🔖 Guia
 - [Projeto](#projeto)
