@@ -14,7 +14,7 @@ interface ThemeContextValues {
 export const ThemeContext = createContext({} as ThemeContextValues);
 
 export function ThemeProvider({ children }) {
-    const [theme, setTheme] = useState({ title: "dark", colors: darkTheme });
+    const [theme, setTheme] = useState({ title: "light", colors: lightTheme });
 
     function changeTheme() {
         theme.title === "light" ? 
