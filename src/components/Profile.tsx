@@ -1,14 +1,22 @@
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { ChallengesContext } from "../contexts/ChallengesContext";
 import { ThemeContext } from "../contexts/ThemeContext";
 import styles from "../styles/components/Profile.module.css";
 
-import { Moon } from "../components/icons/Moon";
+import { MoveItIcons } from "./icons/MoveItIcons";
 
 export function Profile() {
     const { theme, changeTheme } = useContext(ThemeContext);
     const { level } = useContext(ChallengesContext);
     
+    const [icon, setIcon] = useState({ name: "moon", color: "#BABABA" });
+    useEffect(() => {
+        setIcon(theme.title === "light" ? 
+            { name: "moon", color: "#000"} :
+            { name: "sun", color: "#BABABA" }
+        )
+    }, [theme]);
+
     return (
         <div className={styles.profileContainer}>
             <img src="icons/default-avatar.svg" alt="Foto de perfil" />
@@ -21,7 +29,7 @@ export function Profile() {
             </div>
             <div className={styles.buttonContainer}>
                 <button onClick={changeTheme}>
-                    <Moon color={ theme.title === "light" ? "#000000" : "#BABABA"}/>
+                    <MoveItIcons name={icon.name} color={icon.color} />
                 </button>
             </div>
         </div>
